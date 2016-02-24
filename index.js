@@ -4,7 +4,7 @@
  * Module dependencies
  */
 
-require('color');
+require('colors');
 var program = require('commander'),
     fs = require('fs');
 
@@ -26,9 +26,8 @@ if ( typeof appPath !== 'undefined' && appPath ) {
     // Path argument was'nt passed
 
     var obj = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    console.log(obj.dependencies);
+    console.log('These are the packages that are currently installed on your system:'.yellow);
     for(var dep in obj.dependencies) {
-
-        console.log(dep);
+        console.log('Package: ' + dep + ' Version: ' + obj.dependencies[dep]);
     }
 }
