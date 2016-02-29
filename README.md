@@ -6,7 +6,7 @@ I still didn't decide to which direction it will go. What I do know is that I wo
 
 #### Latest updates can be found in commits.
 
-*Packages in use: *
+**Packages in use:**
 1. [Commander](https://github.com/tj/commander.js/ "Commander github")
 2. [Prompt](https://github.com/flatiron/prompt "Prompt github")
 2. [Colors](https://github.com/Marak/colors.js "Colors github")
