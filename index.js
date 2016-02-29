@@ -4,30 +4,57 @@
  * Module dependencies
  */
 
-require('colors');
 var program = require('commander'),
-    fs = require('fs');
+  prompt = require('prompt')
+  inputHandler = require('./lib/inputhandler');
+
+function list(val) {
+  return val.split(',');
+}
 
 program
-    .version('0.0.1')
-    .arguments('<path>')
-    .action(function(path){
-        appPath = path;
-    })
-    .parse(process.argv);
+  .version('0.0.1')
+  .description('This tool helps you to manage your npms inside your project')
+  .usage('<path>')
+  .option('-p, --path', 'Path of your app')
+  .action(function (path) {
+    console.log(path);
+    appPath = path;
+  }).parse(process.argv);
 
-// Check if path argument was passed
-if ( typeof appPath !== 'undefined' && appPath ) {
+/*
+ Prompt for file and directory list,
+ and get data
+ */
+var schema = {
+  properties: {
+    directories: {
+      message: 'Please enter the directories seperated by a comma, or leave empty for defaults'
+    },
+    files: {
+      message: 'Please enter the files seperated by a comma, or leave empty for defaults'
+    }
+  }
+};
+
+prompt.start().get(schema, function (err, result) {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(result);
+  // Check if path argument was passed
+    if (typeof appPath !== 'undefined' && appPath) {
 
     // Path argument was passed
 
-} else {
+      inputHandler.parseInput(appPath, result.directories, result.files);
 
+    } else {
     // Path argument was'nt passed
 
-    var obj = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    console.log('These are the packages that are currently installed on your system:'.yellow);
-    for(var dep in obj.dependencies) {
-        console.log('Package: ' + dep + ' Version: ' + obj.dependencies[dep]);
+      inputHandler.parseInput('', result.directories, result.files);
+
     }
-}
+
+});
