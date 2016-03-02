@@ -18,7 +18,6 @@ program
   .usage('<path>')
   .option('-p, --path', 'Path of your app')
   .action(function (path) {
-    console.log(path);
     appPath = path;
   }).parse(process.argv);
 
@@ -42,7 +41,6 @@ prompt.start().get(schema, function (err, result) {
     console.log(err);
     return;
   }
-  console.log(result);
   // Check if path argument was passed
     if (typeof appPath !== 'undefined' && appPath) {
 
