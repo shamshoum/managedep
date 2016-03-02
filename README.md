@@ -6,6 +6,12 @@ I still didn't decide to which direction it will go. What I do know is that I wo
 
 #### Latest updates can be found in commits.
 
+**Example for inputing folders: **
+'folder1,folder2,folder3,folder3/subfolder'
+
+**Example for inputing files: **
+'file1,file2,folder/file3'
+
 **Packages in use:**
 1. [Commander](https://github.com/tj/commander.js/ "Commander github")
 2. [Prompt](https://github.com/flatiron/prompt "Prompt github")

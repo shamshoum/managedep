@@ -3,7 +3,7 @@
 /**
  * Module dependencies
  */
-
+require('colors');
 var program = require('commander'),
   prompt = require('prompt')
   inputHandler = require('./lib/inputhandler');
@@ -28,7 +28,7 @@ program
 var schema = {
   properties: {
     directories: {
-      message: 'Please enter the directories seperated by a comma, or leave empty for defaults'
+      message: 'Please enter the directories seperated by a comma, or leave empty for defaults(Check readme)'
     },
     files: {
       message: 'Please enter the files seperated by a comma, or leave empty for defaults'
