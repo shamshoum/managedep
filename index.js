@@ -5,12 +5,8 @@
  */
 require('colors');
 var program = require('commander'),
-  prompt = require('prompt')
+  prompt = require('prompt'),
   inputHandler = require('./lib/inputhandler');
-
-function list(val) {
-  return val.split(',');
-}
 
 program
   .version('0.0.1')
