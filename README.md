@@ -24,11 +24,13 @@ or you can just clone this repository and use it like this:
 
 Note: Path is optional if not entered will work on local directory
 
-**Example for inputing folders:**
+### Directories and files input examples:
+
+Example for inputing folders:
 
 ```folder1,folder2,folder3,folder3/subfolder```
 
-**Example for inputing files:**
+Example for inputing files:
 
 ```file1,file2,folder/file3```
 
