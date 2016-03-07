@@ -22,17 +22,17 @@ or you can just clone this repository and use it like this:
 
 ```node index.js <path>```
 
-Note: Path is optional if not entered will work on local directory
+Note: Path is optional if not entered will work on current folder
 
-### Directories and files input examples:
+### Folders and files input examples:
 
 Example for inputing folders:
 
-```folder1,folder2,folder3,folder3/subfolder```
+    folder1,folder2,folder3,folder3\subfolder
 
 Example for inputing files:
 
-```file1,file2,folder/file3```
+    file1,file2,folder\file3
 
 **Packages in use:**
 1. [Commander](https://github.com/tj/commander.js/ "Commander github")
