@@ -6,7 +6,10 @@
 require('colors');
 var program = require('commander'),
   prompt = require('prompt'),
-  inputHandler = require('./lib/inputhandler');
+  inputHandler = require('./lib/inputhandler'),
+  fsHandler = require('./lib/fshandler');
+
+var files;
 
 program
   .version('0.0.1')
@@ -32,23 +35,35 @@ var schema = {
   }
 };
 
+// Get files and directories from user
 prompt.start().get(schema, function (err, result) {
   if (err) {
     console.log(err);
     return;
   }
   // Check if path argument was passed
-    if (typeof appPath !== 'undefined' && appPath) {
+  if (typeof appPath !== 'undefined' && appPath) {
 
     // Path argument was passed
+    // Read PKG json and its dependencies
+    var pkgJson = fsHandler.getPkgJsn(appPath);
+    files = inputHandler.parseInput(appPath, result.directories, result.files);
 
-      inputHandler.parseInput(appPath, result.directories, result.files);
-
-    } else {
+  } else {
     // Path argument was'nt passed
+    // Read PKG json and its dependencies
+    var pkgJson = fsHandler.getPkgJsn('');
+    files = inputHandler.parseInput('', result.directories, result.files);
 
-      inputHandler.parseInput('', result.directories, result.files);
+  }
 
+  var pkgDependencies = pkgJson.dependencies;
+  var dependecies = inputHandler.handleFiles(files);
+
+  for (var k in pkgDependencies) {
+    if (!dependecies[k]) {
+      console.log("Not in use ".red + k.red); // TODO: delete this later
     }
+  }
 
 });

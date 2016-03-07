@@ -1,6 +1,6 @@
 {
   "name": "node-dependency-manager",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "This cli tool will help manage dependencies in your node js project",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/shamshoum/managedep#readme",
   "dependencies": {
-    "async": "^1.5.2",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "prompt": "^1.0.0"
