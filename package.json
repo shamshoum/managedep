@@ -4,7 +4,7 @@
   "description": "This cli tool will help manage dependencies in your node js project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
