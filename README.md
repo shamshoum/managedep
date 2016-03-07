@@ -5,7 +5,7 @@
 I still didn't decide to which direction it will go. What I do know is 
 that I would like to have a tool that will give me abilities to easily manage my apps dependencies.
 
-Currently the tool will check which dependcies that are not installed in
+Currently the tool will check which dependcies that are installed in
 your package.json and aren't in actual use.
 
 #### Latest updates can be found in commits.
