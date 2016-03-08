@@ -38,6 +38,7 @@ Example for inputing files:
 1. [Commander](https://github.com/tj/commander.js/ "Commander github")
 2. [Prompt](https://github.com/flatiron/prompt "Prompt github")
 3. [Colors](https://github.com/Marak/colors.js "Colors github")
+3. [Winston](https://github.com/winstonjs/winston "Winston github")
 
 Note: If you have any suggestions or bug reports don't hesitate to add
 them to the issues in github and I will look at them and see what I can do.

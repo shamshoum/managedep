@@ -1,3 +1,4 @@
 /node_modules
 /.idea
+/managedep.log
 npm-debug.log
