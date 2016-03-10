@@ -10,6 +10,8 @@ your package.json and aren't in actual use.
 
 **Latest updates can be found in commits.**
 
+This package requires a Node version of 0.12 and later
+
 ### How to start using the npm:
 
 You can either install from npm and use it globaly:
