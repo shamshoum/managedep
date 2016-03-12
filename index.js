@@ -5,6 +5,7 @@
  */
 require('colors');
 var program = require('commander'),
+  process = require('process'),
   prompt = require('prompt'),
   inputHandler = require('./lib/inputhandler'),
   fsHandler = require('./lib/fshandler'),
@@ -12,7 +13,7 @@ var program = require('commander'),
   builtinModules = require('builtin-modules');
 
 var files,
-  appPath = __dirname + '/';
+  appPath = process.cwd() + '\\';
 
 
 program
