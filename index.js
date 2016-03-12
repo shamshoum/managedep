@@ -8,10 +8,11 @@ var program = require('commander'),
   prompt = require('prompt'),
   inputHandler = require('./lib/inputhandler'),
   fsHandler = require('./lib/fshandler'),
-  winston = require('winston');
+  winston = require('winston'),
+  builtinModules = require('builtin-modules');
 
 var files,
-  appPath = '';
+  appPath = __dirname + '/';
 
 
 program
@@ -64,10 +65,18 @@ prompt.start().get(schema, function (err, result) {
   var pkgDependencies = pkgJson.dependencies;
   var dependecies = inputHandler.handleFiles(files);
 
-  for (var k in pkgDependencies) {
-    if (!dependecies[k]) {
-      winston.log('info', 'Package not in use: ' + k.cyan);
+  for (var dep in pkgDependencies) {
+    if (!dependecies[dep]) {
+      winston.log('error', 'Package not in use: ' + dep.cyan);
     }
   }
+
+  for (var dep in dependecies) {
+    if (!pkgDependencies[dep] && builtinModules.indexOf(dep) == -1) {
+      winston.log('error', 'Package used but not saved: ' + dep.yellow);
+    }
+  }
+
+  // TODO: Print something if everything was ok
 
 });
