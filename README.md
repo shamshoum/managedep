@@ -51,6 +51,7 @@ If nothing was entered will use default files(index.js, app.js)
 2. [Prompt](https://github.com/flatiron/prompt "Prompt github")
 3. [Colors](https://github.com/Marak/colors.js "Colors github")
 4. [Winston](https://github.com/winstonjs/winston "Winston github")
+5. [builtin-modules](https://github.com/sindresorhus/builtin-modules "builtin-modules github")
 
 Note: If you have any suggestions or bug reports don't hesitate to add
 them to the issues in github and I will look at them and see what I can do.
