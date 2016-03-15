@@ -1,6 +1,6 @@
 {
   "name": "node-dependency-manager",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "This cli tool will help manage dependencies in your node js project",
   "main": "index.js",
   "scripts": {

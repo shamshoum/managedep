@@ -2,11 +2,13 @@
 
 **This little command line tool is a work in progress !!!**
 
-I still didn't decide to which direction it will go. What I do know is
-that I would like to have a tool that will give me abilities to easily manage my apps dependencies.
+This tool is suppose to help node js developers to easily manage dependencies.
+Those that are in actual use and those that are not. Currently the tool
+will print out all the packages that are saved in your package.json file,
+and are not in use and it will show which dependencies are required in 
+your scripts but are not saved in package.json
 
-Currently the tool will check which dependcies that are installed in
-your package.json and aren't in actual use.
+Note that this tool will ignore any require lines that are inside comments.
 
 **Latest updates can be found in commits.**
 
@@ -26,7 +28,7 @@ or you can just clone this repository and use it like this:
 
 Note: Path is optional if not entered will work on current folder
 
-**Options: **
+**Options:**
 
 `-e / --error` Get only error logs (Note that resuts are also written as errors)
 
