@@ -20,7 +20,7 @@ You can either install from npm and use it globaly:
 
 ```npm install -g node-dependency-manager``` 
 
-```managdedep <path>```
+```managedep <path>```
 
 or you can just clone this repository and use it like this:
 
